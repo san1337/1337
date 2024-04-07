@@ -1,13 +1,136 @@
-import pygame
-pygame.init()
-screen = pygame.display.set_mode((800, 600))
+import random
 
-class Player(pygame.sprite.Sprite):
-    def __init__(self):
-        super().__init__()
-        self.image = pygame.Surface((50, 50))
-        self.image.fill((255, 255, 255))
-        self.rect = self.image.get_rect()
-        self.rect.x = 50
-        self.rect.y = 50
 
+start = input('Вы запустили игру "Камень, ножницы, бумага". Хотите играть? (Вводите + или -): ')
+
+if start == '+':
+    print('Загрузка...')
+    print("Загрузка завершена! Погнали!")
+    print("5...4...3...2...1...0")
+    print('Если хотите закончить вводите "8".')
+    print('Если захотите узнать счёт вводите "z".')
+    user_ball = 0
+    rand_ball = 0
+    while True:
+        user = input("Камень, ножницы или бумага? (Вводите к, н или б): ")
+        list_play = ['к', 'н', 'б']
+        if user in list_play:
+            rand = random.choice(list_play)
+            print(rand)
+
+            if rand == 'к' and user == 'н':
+                rand_ball += 1
+            if rand == 'к' and user == 'б':
+    
+             user_ball += 1
+            if rand == 'н' and user == 'к':
+                user_ball += 1
+            if rand == 'н' and user == 'б':
+                rand_ball += 1
+            if rand == 'б' and user == 'н':
+                user_ball += 1
+            if rand == 'б' and user == 'к':
+                rand_ball += 1
+        elif user == 'с':
+            print('Ваши баллы - ', user_ball, '. Баллы  соперника - ', rand_ball, ".")
+        elif user == '-':
+            print('Ваши баллы - ', user_ball, '. Баллы  соперника - ', rand_ball, ".")
+            print('Конец игры! Заходи ещё!')
+            break
+        else:
+            print('Вводите к, н или б')
+ 
+start = input('Вы запустили игру "Камень, ножницы, бумага". Хотите поиграть? (Вводите + или -): ')
+
+if start == '+':
+    print('Загрузка...')
+    print("Загрузка завершена! Начинаем!")
+    print("3...2...1...")
+    print('Если захотите закончить вводите "-".')
+    print('Если захотите узнать счёт вводите "с".')
+    user_ball = 0
+    rand_ball = 0
+    while True:
+        user = input("Камень, ножницы или бумага? (Вводите к, н или б): ")
+        list_play = ['к', 'н', 'б']
+        if user in list_play:
+            rand = random.choice(list_play)
+            print(rand)
+
+
+            if rand == 'к' and user == 'н':
+                rand_ball += 1
+            if rand == 'к' and user == 'б':
+                user_ball += 1
+            if rand == 'н' and user == 'к':
+                user_ball += 1
+            if rand == 'н' and user == 'б':
+                rand_ball += 1
+            if rand == 'б' and user == 'н':
+                user_ball += 1
+            if rand == 'б' and user == 'к':
+                rand_ball += 1
+        elif user == 'с':
+            print('Ваши баллы - ', user_ball, '. Баллы вашего соперника - ', rand_ball, ".")
+        elif user == '-':
+            print('Ваши баллы - ', user_ball, '. Баллы вашего соперника - ', rand_ball, ".")
+            print('Конец игры! Заходите ещё!')
+            break
+        else:
+            print('Вводите к, н или б')
+
+
+if start == '-':
+    print('Жаль... :(')
+else:
+    print('Простите, я вас не понял, если хотите играть перезапустите программу и введите "+". Спасибо!')
+
+
+if start == '-':
+    print('Жаль... :(')
+else:
+    print('Простите, я вас не понял, если хотите играть перезапустите программу и введите "+". Спасибо!')
+
+start = input('Вы запустили игру "Камень, ножницы, бумага". Хотите поиграть? (Вводите + или -): ')
+
+if start == '+':
+    print('Загрузка...')
+    print("Загрузка завершена! Начинаем!")
+    print("3...2...1...")
+    print('Если захотите закончить вводите "-".')
+    print('Если захотите узнать счёт вводите "с".')
+    user_ball = 0
+    rand_ball = 0
+    while True:
+        user = input("Камень, ножницы или бумага? (Вводите к, н или б): ")
+        list_play = ['к', 'н', 'б']
+        if user in list_play:
+            rand = random.choice(list_play)
+            print(rand)
+
+            if rand == 'к' and user == 'н':
+                rand_ball += 1
+            if rand == 'к' and user == 'б':
+                user_ball += 1
+            if rand == 'н' and user == 'к':
+                user_ball += 1
+            if rand == 'н' and user == 'б':
+                rand_ball += 1
+            if rand == 'б' and user == 'н':
+                user_ball += 1
+            if rand == 'б' and user == 'к':
+                rand_ball += 1
+        elif user == 'с':
+            print('Ваши баллы - ', user_ball, '. Баллы вашего соперника - ', rand_ball, ".")
+        elif user == '-':
+            print('Ваши баллы - ', user_ball, '. Баллы вашего соперника - ', rand_ball, ".")
+            print('Конец игры! Заходите ещё!')
+            break
+        else:
+            print('Вводите к, н или б')
+
+
+if start == '-':
+    print('Жаль... :(')
+else:
+    print('Простите, я вас не понял, если хотите играть перезапустите программу и введите "+". Спасибо!')
