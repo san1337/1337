@@ -11,31 +11,31 @@ win.setWindowTitle('Easy Editor')
 
 
 okno = QLabel('Добро пожаловать, в игру:Камень,ножницы, бумага')
+schet = QLabel('Счёт')
 
-left_btn = QPushButton('запуск игры')
-right_btn = QPushButton('выключение игры')
-mirror_btn = QPushButton('счёт')
-blur_btn = QPushButton('бумага')
-bw_btn = QPushButton('ножницы')
+
+
+bum_btn = QPushButton('бумага')
+nsh_btn =  QPushButton('ножницы')
 kam_btn = QPushButton('камень')
 
 
 
 
-btns_line = QHBoxLayout()
-main_line = QHBoxLayout()
+btns_line = QVBoxLayout()
+main_line = QVBoxLayout()
 v_line1 = QVBoxLayout()
 v_line2 = QVBoxLayout()
 
 
 
-btns_line.addWidget(left_btn)
-btns_line.addWidget(right_btn)
-btns_line.addWidget(mirror_btn)
-btns_line.addWidget(blur_btn)
-btns_line.addWidget(bw_btn)
+
+
+btns_line.addWidget(bum_btn)
+btns_line.addWidget(nsh_btn)
 btns_line.addWidget(kam_btn)
 v_line2.addWidget(okno)
+v_line1.addWidget(schet)
 
 
 
