@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QListWidget, QVBoxLayout, QHBoxLayout
 import random 
+from time import sleep
 
 app = QApplication([])
 win = QWidget()
@@ -68,6 +69,7 @@ def paper():
     global st
     global sb
     global och
+    sleep(3)
     rand = random.choice(list_play)
     if rand == 'Камень':
         okno.setText('Выбор компьютера: ' + rand + '. Ваш выбор: бумага. Вы победили!')
@@ -100,6 +102,7 @@ def  scissors():
     global st
     global sb
     global och
+    sleep(3)
     rand = random.choice(list_play)
     print(rand)
     if rand == 'Бумага':
@@ -127,6 +130,7 @@ def stone():
     global st
     global sb
     global och
+    sleep(3)
     rand = random.choice(list_play)
     if rand == 'Ножницы':
         okno.setText('Выбор компьютера: ' + rand + '. Ваш выбор: камень. Вы победили!')
@@ -153,6 +157,7 @@ def kirka():
     global st
     global sb
     global och
+    sleep(3)
     rand = random.choice(list_play)
     if rand == 'Ножницы':
         okno.setText('Выбор компьютера: ' + rand + '. Ваш выбор: кирка. Вы победили!')
